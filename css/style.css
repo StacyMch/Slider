@@ -1,0 +1,425 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu {
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    z-index: 99;
+}
+
+#menu a {
+    display: block;
+    margin: 10px;
+}
+
+.slide {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.feature {
+    transition: all 0.5;
+    overflow: hidden;
+}
+
+.feature:hover {
+    transform: scale(1.5);
+}
+
+.feature > div {
+    transition: all 0.5;
+}
+
+.small-text {
+    font-size: 9px;
+}
+
+.feature > div > div {
+    opacity: 0;
+    transition: all 0.5;
+}
+
+.feature:hover > div > div {
+    opacity: 1;
+}
+
+.circle-text {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* меняем фон у первого вложенного diva в feature */
+.feature:hover > div {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#more:hover {
+    transition: 0.5s;
+}
+
+#more3, #more7, #more9 {
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+#more5, #more9 {
+    margin-right: 30px;
+    transition: 0.5s;
+}
+
+#more7 {
+    margin-left: 30px;
+    transition: 0.5s;
+}
+
+#price {
+    position: absolute;
+    top: 169px;
+    right: 194px;
+    background-image: url('..//img/price.jpg');
+}
+
+#quality {
+    position: absolute;
+    bottom: 154px;
+    left: 794px;
+    background-image: url('..//img/quality.jpg');
+}
+
+#cpu {
+    position: absolute;
+    top: 156px;
+    left: 749px;
+    background-image: url('..//img/cpu.png');
+}
+
+#screen {
+    position: absolute;
+    bottom: 380px;
+    left: 280px;
+    background-image: url('..//img/screen.webp');
+}
+
+#benefits {
+    position: absolute;
+    top: 200px;
+    right: 194px;
+    background-image: url('..//img/benefits.png');
+}
+
+#body {
+    position: absolute;
+    bottom: 160px;
+    left: 860px;
+    background-image: url('..//img/body.png');
+}
+
+#design {
+    position: absolute;
+    top: 170px;
+    left: 750px;
+    background-image: url('..//img/design-icon.jpg');
+}
+
+#model {
+    position: absolute;
+    top: 300px;
+    left: 280px;
+    background-image: url('..//img/model.jpg');
+}
+
+#functionality {
+    position: absolute;
+    top: 80px;
+    right: 120px;
+    background-image: url('..//img/funct.png');
+}
+
+#reliability {
+    position: absolute;
+    bottom: 30px;
+    left: 158px;
+    background-image: url('..//img/reliability.png');
+}
+
+#camera {
+    position: absolute;
+    top: 200px;
+    left: 645px;
+    background-image: url('..//img/camera.jpg');
+}
+
+#display {
+    position: absolute;
+    bottom: 260px;
+    right: 420px;
+    background-image: url('..//img/display.png');
+}
+
+#sizes {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-image: url('..//img/sizes.png');
+}
+
+#five-g {
+    position: absolute;
+    top: 200px;
+    right: 194px;
+    background-image: url('..//img/5g.jpg');
+}
+
+#processor {
+    position: absolute;
+    bottom: 380px;
+    left: 270px;
+    background-image: url('..//img/processor.png');
+}
+
+#resolution {
+    position: absolute;
+    bottom: 220px;
+    left: 880px;
+    background-image: url('..//img/4k.jpg');
+}
+
+#memory {
+    position: absolute;
+    top: 160px;
+    left: 670px;
+    background-image: url('..//img/memory1.jpg');
+}
+
+.bg-fix {
+    background-size: cover;
+    background-position: center center;
+}
+
+#more:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#more3:hover {
+    animation: heartbeat 1.5s ease-in-out infinite both;
+    animation-iteration-count: infinite;
+    }
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+    }
+    17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+    }
+    33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+    }
+    45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+    }
+}
+
+#more5:hover {
+    animation: wobble-ver-right 0.8s both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wobble-ver-right {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+        transform-origin: 50% 50%;
+    }
+    15% {
+            transform: translateY(-30px) rotate(6deg);
+    }
+    30% {
+            transform: translateY(15px) rotate(-6deg);
+    }
+    45% {
+            transform: translateY(-15px) rotate(3.6deg);
+    }
+    60% {
+            transform: translateY(9px) rotate(-2.4deg);
+    }
+    75% {
+            transform: translateY(-6px) rotate(1.2deg);
+    }
+}
+
+#more7:hover {
+                animation: jello-vertical 0.9s both;
+                animation-iteration-count: infinite;
+}
+
+@keyframes jello-vertical {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+#more9:hover {
+        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+        animation-iteration-count: infinite;
+}
+
+@keyframes shake-bottom {
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 100%;
+    }
+    10% {
+        transform: rotate(2deg);
+    }
+    20%,
+    40%,
+    60% {
+        transform: rotate(-4deg);
+    }
+    30%,
+    50%,
+    70% {
+        transform: rotate(4deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
+.flex-box {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-bottom-center {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flex-right-end {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex-left-start {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.flex-right-center {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.btn-orange {
+    background-color: rgb(255 226 0 / 82%);
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+#menu > div > a.btn-orange:hover {
+    background-color: rgba(226, 226, 10, 0.393);
+}
+
+.btn-big {
+    padding: 20px 40px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.circle-biggest {
+    width: 145px;
+    height: 145px;
+}
+
+.circle-big {
+    width: 120px;
+    height: 120px;
+}
+
+.circle-middle {
+    width:  100px;
+    height: 100px;
+}
+
+.circle-small {
+    width:  50px;
+    height: 50px;
+}
